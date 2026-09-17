@@ -1,10 +1,6 @@
-"""
-Compatibilidade com versão anterior.
-Importa do novo módulo estruturado em camadas.
-"""
+"""DrakkTime - Sistema de cálculo de horas extras."""
 
-# Mantém compatibilidade com código antigo
-from drakktime.core import (
+from .core import (
     Employee,
     OvertimeSummary,
     Role,
@@ -16,6 +12,8 @@ from drakktime.core import (
     format_summary_table,
     summarize_overtime,
 )
+
+__version__ = "0.1.0"
 
 __all__ = [
     "Employee",
@@ -29,7 +27,3 @@ __all__ = [
     "summarize_overtime",
     "format_summary_table",
 ]
-
-if __name__ == "__main__":
-    print("DrakkTime - cálculo de horas extras")
-    print("Use este módulo em integração com interface desktop/web conforme necessidade.")
